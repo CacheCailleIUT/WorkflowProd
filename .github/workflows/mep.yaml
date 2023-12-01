@@ -1,0 +1,8 @@
+name: mep
+on:  
+  workflow_dispatch:
+    inputs:
+      envdep:
+        description: "recette env"
+        required: true
+        
