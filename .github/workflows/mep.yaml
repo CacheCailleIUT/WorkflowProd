@@ -17,11 +17,12 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: actions/checkout@v4.1.1
       - name: "Déploiement Prod"
-        if: github.event.inputs.server == "prod"
         run: "Déploiement en production"
+        if: github.event.inputs.server == 'prod'
       - name: "Déploiement Recette"
-        if: github.event.inputs.server == "rec"
         run: "Déploiement en recette"
+        if: github.event.inputs.server == 'rec'
       - name: "Déploiement Dev"
-        if: github.event.inputs.server == "dev"
         run: "Déploiement en dev"
+        if: github.event.inputs.server == 'dev'
+
