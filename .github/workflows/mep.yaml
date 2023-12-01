@@ -2,7 +2,12 @@ name: mep
 on:  
   workflow_dispatch:
     inputs:
-      envdep:
-        description: "recette env"
+      server:
+        description: "SALUT LES AMIS"
         required: true
-        
+jobs: 
+  deploy-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Démarrage Workflow"
+        run: echo "Démarrage du workFlow"
