@@ -15,4 +15,4 @@ jobs:
         run: echo "Démarrage du workFlow ${{github.ref}}"
       - name: "Récupération code"
         run: echo "Récupération du code"
-        if: ${{ github.ref == 'refs/heads/main' }}
+        if: ${{ github.ref == 'refs/heads/main2' }}
