@@ -3,8 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       server:
-        description: "SALUT LES AMIS"
+        description: "Env déploiement"
         required: true
+        default: "dev"
 jobs: 
   deploy-env:
     if: ${{ github.ref == 'refs/heads/main' }}
