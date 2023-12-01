@@ -8,8 +8,11 @@ on:
         default: "dev"
 jobs: 
   deploy-env:
-    if: ${{ github.ref == 'refs/heads/main' }}
+    
     runs-on: ubuntu-latest
     steps:
       - name: "Démarrage Workflow"
         run: echo "Démarrage du workFlow ${{github.ref}}"
+      - name: "Récupération code"
+        run: echo "Récupération du code"
+        if: ${{ github.ref == 'refs/heads/main' }}
