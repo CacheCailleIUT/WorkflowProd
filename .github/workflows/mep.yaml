@@ -13,6 +13,9 @@ jobs:
     steps:
       - name: "Démarrage Workflow"
         run: echo "Démarrage du workFlow ${{github.ref}}"
-      - name: "Récupération code"
-        run: echo "Récupération du code"
-        if: ${{ github.ref == 'refs/heads/main2' }}
+      - name: "Checkout"
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: actions/checkout@v4.1.1
+      - name: "Déploiement Prod"
+        if: github.event.inputs.server == "prod"
+        run: "Déploiement en production"
